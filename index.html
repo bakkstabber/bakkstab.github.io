@@ -6,7 +6,7 @@
     <title>Bakkstabs page!</title>
     <style>
         body {
-            background-color: #b3e42d; 
+            background-color: #f0f0f0;
             font-family: 'Arial', sans-serif;
             text-align: center;
             margin: 20px;
@@ -35,6 +35,10 @@
             font-weight: bold;
             color: #2ecc71;
         }
+        #suggestion {
+            margin-top: 10px;
+            color: #3498db;
+        }
     </style>
 </head>
 <body>
@@ -48,10 +52,11 @@
         <p>5. Ways to contact me</p>
         
         <label for="search">Search:</label>
-        <input type="text" id="search" placeholder="Type your search here">
+        <input type="text" id="search" placeholder="Type your search here" oninput="updateSuggestion()">
         <button onclick="search()">Go!</button>
         
         <div id="result"></div>
+        <div id="suggestion"></div>
     </div>
 
     <script>
@@ -60,23 +65,48 @@
             var resultDiv = document.getElementById('result');
 
             switch (searchInput) {
-                case 'unblocked games':
-                    resultDiv.innerHTML = 'Discover a world of unblocked games!';
+                case 'u':
+                    resultDiv.innerHTML = 'Unblocked games';
                     break;
-                case 'proxies/vpns':
-                    resultDiv.innerHTML = 'Explore proxies and VPNs for secure browsing.';
+                case 'p':
+                    resultDiv.innerHTML = 'Proxies/VPNs';
                     break;
-                case 'fun websites':
-                    resultDiv.innerHTML = '';
+                case 'f':
+                    resultDiv.innerHTML = 'Fun websites';
                     break;
-                case 'unblocked movies':
-                    resultDiv.innerHTML = 'https://github.com/bakkstabber/movies/blob/main/movies';
+                case 'm':
+                    resultDiv.innerHTML = 'Unblocked movies';
                     break;
-                case 'ways to contact me':
-                    resultDiv.innerHTML = 'Email: priestsOG@proton.me';
+                case 'w':
+                    resultDiv.innerHTML = 'Ways to contact me';
                     break;
                 default:
                     resultDiv.innerHTML = 'Sorry, no information found for your search.';
+            }
+        }
+
+        function updateSuggestion() {
+            var searchInput = document.getElementById('search').value.toLowerCase();
+            var suggestionDiv = document.getElementById('suggestion');
+
+            switch (searchInput) {
+                case 'u':
+                    suggestionDiv.innerHTML = 'Unblocked games';
+                    break;
+                case 'p':
+                    suggestionDiv.innerHTML = 'Proxies/VPNs';
+                    break;
+                case 'f':
+                    suggestionDiv.innerHTML = 'Fun websites';
+                    break;
+                case 'm':
+                    suggestionDiv.innerHTML = 'Unblocked movies';
+                    break;
+                case 'w':
+                    suggestionDiv.innerHTML = 'Ways to contact me';
+                    break;
+                default:
+                    suggestionDiv.innerHTML = '';
             }
         }
     </script>
