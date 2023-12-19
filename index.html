@@ -50,6 +50,7 @@
     <div id="subheader">Explore the categories below or use the search bar</div>
 
     <input type="text" id="search-bar" placeholder="Search...">
+    <button onclick="performSearch()">Search</button>
 
     <div id="options">
         <a href="#">1. Unblocked games</a>
@@ -58,6 +59,14 @@
         <a href="#">4. How to contact/get in reach with me</a>
         <a href="#">5. Fun websites</a>
     </div>
+
+    <script>
+        function performSearch() {
+            var searchTerm = document.getElementById("search-bar").value;
+            alert("You searched for: " + searchTerm);
+            // Add further logic here (e.g., redirect to a search results page)
+        }
+    </script>
 </body>
 
 </html>
