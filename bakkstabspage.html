@@ -3,45 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bakkstab's Page</title>
+    <title>Bakkstabs page!</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #f0f0f0;
             text-align: center;
-            margin: 50px;
+            margin: 20px;
         }
-
+        #content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
         h1 {
-            color: rgb(255, 0, 0);
-            animation: colorChange 5s
-
-            @keyframes colorChange {
-        0% {
-            color: rgb(255, 0, 0);
+            color: #3498db;
         }
-        50% {
-            color: rgb(0, 255, 0);
+        input[type="text"] {
+            padding: 8px;
+            width: 70%;
+            margin-top: 10px;
         }
-        100% {
-            color: rgb(0, 0, 255);
+        button {
+            padding: 8px 15px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            cursor: pointer;
         }
-    }
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+            color: #2ecc71;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <h1>Bakkstabs page!</h1>
+        <p>Welcome to the playful world of Bakkstabs! Explore and discover the following:</p>
+        <p>1. Unblocked games</p>
+        <p>2. Proxies/VPNs</p>
+        <p>3. Fun websites</p>
+        <p>4. Unblocked movies</p>
+        <p>5. Ways to contact me</p>
+        
+        <label for="search">Search:</label>
+        <input type="text" id="search" placeholder="Type your search here">
+        <button onclick="search()">Go!</button>
+        
+        <div id="result"></div>
+    </div>
 
-    input {
-        padding: 10px;
-        margin: 10px;
-    }
+    <script>
+        function search() {
+            var searchInput = document.getElementById('search').value.toLowerCase();
+            var resultDiv = document.getElementById('result');
 
-    #searchResults {
-        margin-top: 20px;
-    }
-</style>
-
-
-    - BakkstabsPage
-  - index.html
-  - css
-    - style.css
-  - js
-    - script.js
+            switch (searchInput) {
+                case 'unblocked games':
+                    resultDiv.innerHTML = 'Discover a world of unblocked games!';
+                    break;
+                case 'proxies/vpns':
+                    resultDiv.innerHTML = 'Explore proxies and VPNs for secure browsing.';
+                    break;
+                case 'fun websites':
+                    resultDiv.innerHTML = 'Have fun exploring entertaining websites!';
+                    break;
+                case 'unblocked movies':
+                    resultDiv.innerHTML = 'Watch unblocked movies hassle-free.';
+                    break;
+                case 'ways to contact me':
+                    resultDiv.innerHTML = 'Feel free to contact me at your convenience!';
+                    break;
+                default:
+                    resultDiv.innerHTML = 'Sorry, no information found for your search.';
+            }
+        }
+    </script>
+</body>
+</html>
