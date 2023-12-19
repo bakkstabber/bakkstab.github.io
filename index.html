@@ -53,18 +53,32 @@
     <button onclick="performSearch()">Search</button>
 
     <div id="options">
-        <a href="#">1. Unblocked games</a>
-        <a href="#">2. Unblocked movies</a>
-        <a href="#">3. Proxies/vpns</a>
-        <a href="#">4. How to contact/get in reach with me</a>
-        <a href="#">5. Fun websites</a>
+        <a href="#" id="option1">1. Unblocked games</a>
+        <a href="#" id="option2">2. Unblocked movies</a>
+        <a href="#" id="option3">3. Proxies/vpns</a>
+        <a href="#" id="option4">4. How to contact/get in reach with me</a>
+        <a href="#" id="option5">5. Fun websites</a>
     </div>
 
     <script>
         function performSearch() {
-            var searchTerm = document.getElementById("search-bar").value;
-            alert("You searched for: " + searchTerm);
-            // Add further logic here (e.g., redirect to a search results page)
+            var searchTerm = document.getElementById("search-bar").value.toLowerCase();
+            switch (searchTerm) {
+                case "unblocked movies":
+                    window.location.href = "https://github.com/topics/unblocked-games";
+                    break;
+                case "how to contact/get in reach with me":
+                    document.getElementById("search-bar").value = "Email me:) my email: priestsOG@proton.me";
+                    break;
+                case "proxies/vpns":
+                    window.location.href = "https://github.com/pri3sts/unblockedbrowsers/blob/main/main";
+                    break;
+                case "unblocked games":
+                    document.getElementById("search-bar").value = "Coming soon:(";
+                    break;
+                default:
+                    alert("No specific action defined for the search term: " + searchTerm);
+            }
         }
     </script>
 </body>
