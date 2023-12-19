@@ -1,120 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bakkstabs page!</title>
+    <title>Bakkstab's Directory</title>
     <style>
         body {
-            background-color: #f0f0f0;
-            font-family: 'Arial', sans-serif;
-            text-align: center;
+            font-family: Arial, sans-serif;
             margin: 20px;
         }
-        #content {
-            max-width: 600px;
-            margin: 0 auto;
-        }
+
         h1 {
-            color: #3498db;
+            text-align: center;
         }
-        input[type="text"] {
-            padding: 8px;
-            width: 70%;
-            margin-top: 10px;
+
+        #subheader {
+            text-align: center;
+            font-style: italic;
+            color: #666;
         }
-        button {
-            padding: 8px 15px;
-            background-color: #3498db;
-            color: #fff;
-            border: none;
-            cursor: pointer;
+
+        #search-bar {
+            width: 80%;
+            padding: 10px;
+            margin: 20px auto;
+            display: block;
         }
-        #result {
+
+        #options {
+            text-align: center;
             margin-top: 20px;
-            font-weight: bold;
-            color: #2ecc71;
         }
-        #suggestion {
-            margin-top: 10px;
-            color: #3498db;
+
+        #options a {
+            display: block;
+            padding: 10px;
+            margin: 5px;
+            background-color: #eee;
+            text-decoration: none;
+            color: #333;
+            border-radius: 5px;
         }
     </style>
 </head>
+
 <body>
-    <div id="content">
-        <h1>Bakkstabs page!</h1>
-        <p> OP chromebook directory!:</p>
-        <p>1. Unblocked games</p>
-        <p>2. Proxies/VPNs</p>
-        <p>3. Fun websites</p>
-        <p>4. Unblocked movies</p>
-        <p>5. Ways to contact me</p>
-        
-        <label for="search">Search:</label>
-        <input type="text" id="search" placeholder="Type your search here" oninput="updateSuggestion()">
-        <button onclick="search()">Go!</button>
-        
-        <div id="result"></div>
-        <div id="suggestion"></div>
+    <h1>Bakkstab's Directory</h1>
+    <div id="subheader">Explore the categories below or use the search bar</div>
+
+    <input type="text" id="search-bar" placeholder="Search...">
+
+    <div id="options">
+        <a href="#">1. Unblocked games</a>
+        <a href="#">2. Unblocked movies</a>
+        <a href="#">3. Proxies/vpns</a>
+        <a href="#">4. How to contact/get in reach with me</a>
+        <a href="#">5. Fun websites</a>
     </div>
-
-    <script>
-        function search() {
-            var searchInput = document.getElementById('search').value.toLowerCase();
-            var resultDiv = document.getElementById('result');
-
-            switch (searchInput) {
-                case 'u':
-                    resultDiv.innerHTML = 'Unblocked games';
-                    break;
-                case 'p':
-                    resultDiv.innerHTML = 'Proxies/VPNs';
-                    break;
-                case 'f':
-                    resultDiv.innerHTML = 'Fun websites';
-                    break;
-                case 'm':
-                    resultDiv.innerHTML = 'Unblocked movies';
-                    break;
-                case 'w':
-                    resultDiv.innerHTML = 'Ways to contact me';
-                    break;
-                default:
-                    resultDiv.innerHTML = 'Sorry, no information found for your search.';
-            }
-        }
-
-        function updateSuggestion() {
-            var searchInput = document.getElementById('search').value.toLowerCase();
-            var suggestionDiv = document.getElementById('suggestion');
-
-            switch (searchInput) {
-                case 'u':
-                    suggestionDiv.innerHTML = 'Unblocked games';
-                    document.getElementById('search').value = 'Unblocked games';
-                    break;
-                case 'p':
-                    suggestionDiv.innerHTML = 'Proxies/VPNs';
-                    document.getElementById('search').value = 'Proxies/VPNs';
-                    break;
-                case 'f':
-                    suggestionDiv.innerHTML = 'Fun websites';
-                    document.getElementById('search').value = 'Fun websites';
-                    break;
-                case 'm':
-                    suggestionDiv.innerHTML = 'Unblocked movies';
-                    document.getElementById('search').value = 'Unblocked movies';
-                    break;
-                case 'w':
-                    suggestionDiv.innerHTML = 'Ways to contact me';
-                    document.getElementById('search').value = 'Ways to contact me';
-                    break;
-                default:
-                    suggestionDiv.innerHTML = '';
-            }
-        }
-    </script>
 </body>
-</html>
 
+</html>
