@@ -37,7 +37,8 @@
         }
         #suggestion {
             margin-top: 10px;
-            color: #3498db;
+            color: #555;
+            font-size: 12px;
         }
     </style>
 </head>
@@ -65,19 +66,19 @@
             var resultDiv = document.getElementById('result');
 
             switch (searchInput) {
-                case 'u':
+                case 'unblocked':
                     resultDiv.innerHTML = 'Unblocked games';
                     break;
-                case 'p':
+                case 'proxies':
                     resultDiv.innerHTML = 'Proxies/VPNs';
                     break;
-                case 'f':
+                case 'fun':
                     resultDiv.innerHTML = 'Fun websites';
                     break;
-                case 'm':
+                case 'movies':
                     resultDiv.innerHTML = 'Unblocked movies';
                     break;
-                case 'w':
+                case 'contact':
                     resultDiv.innerHTML = 'Ways to contact me';
                     break;
                 default:
@@ -91,24 +92,19 @@
 
             switch (searchInput) {
                 case 'u':
-                    suggestionDiv.innerHTML = 'Unblocked games';
-                    document.getElementById('search').value = 'Unblocked games';
+                    suggestionDiv.innerHTML = 'nblocked';
                     break;
                 case 'p':
-                    suggestionDiv.innerHTML = 'Proxies/VPNs';
-                    document.getElementById('search').value = 'Proxies/VPNs';
+                    suggestionDiv.innerHTML = 'roxies';
                     break;
                 case 'f':
-                    suggestionDiv.innerHTML = 'Fun websites';
-                    document.getElementById('search').value = 'Fun websites';
+                    suggestionDiv.innerHTML = 'un';
                     break;
                 case 'm':
-                    suggestionDiv.innerHTML = 'Unblocked movies';
-                    document.getElementById('search').value = 'Unblocked movies';
+                    suggestionDiv.innerHTML = 'ovies';
                     break;
                 case 'w':
-                    suggestionDiv.innerHTML = 'Ways to contact me';
-                    document.getElementById('search').value = 'Ways to contact me';
+                    suggestionDiv.innerHTML = 'ays to contact me';
                     break;
                 default:
                     suggestionDiv.innerHTML = '';
