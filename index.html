@@ -92,18 +92,23 @@
             switch (searchInput) {
                 case 'u':
                     suggestionDiv.innerHTML = 'Unblocked games';
+                    document.getElementById('search').value = 'Unblocked games';
                     break;
                 case 'p':
                     suggestionDiv.innerHTML = 'Proxies/VPNs';
+                    document.getElementById('search').value = 'Proxies/VPNs';
                     break;
                 case 'f':
                     suggestionDiv.innerHTML = 'Fun websites';
+                    document.getElementById('search').value = 'Fun websites';
                     break;
                 case 'm':
                     suggestionDiv.innerHTML = 'Unblocked movies';
+                    document.getElementById('search').value = 'Unblocked movies';
                     break;
                 case 'w':
                     suggestionDiv.innerHTML = 'Ways to contact me';
+                    document.getElementById('search').value = 'Ways to contact me';
                     break;
                 default:
                     suggestionDiv.innerHTML = '';
